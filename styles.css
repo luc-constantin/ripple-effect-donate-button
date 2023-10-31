@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.heart-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FF5733;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.heart {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-image: url('heart.png'); /* You can use your heart icon here */
+    background-size: cover;
+    animation: pulse 2s infinite;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    transform: scale(0);
+    animation: ripple 1s linear infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 3.9;
+    }
+    100% {
+        transform: scale(9);
+        opacity: 0;
+    }
+}
