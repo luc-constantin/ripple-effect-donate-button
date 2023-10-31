@@ -6,6 +6,9 @@ body {
     margin: 0;
 }
 
+a.heart-button {
+    text-decoration: none;
+}
 .heart-button {
     position: relative;
     display: flex;
